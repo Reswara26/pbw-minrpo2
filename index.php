@@ -1,12 +1,7 @@
 <?php
-// =============================================
-//  index.php — Website Portfolio Reswara
-//  Skills diambil dari database MySQL
-// =============================================
 
 require_once 'koneksi.php';
 
-// Ambil data skills dari database
 $query  = mysqli_query($koneksi, "SELECT * FROM skills ORDER BY id ASC");
 $skills = [];
 while ($row = mysqli_fetch_assoc($query)) {
@@ -22,22 +17,18 @@ mysqli_close($koneksi);
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Reswara Ganendra — Portfolio</title>
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,600;1,9..40,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 
-  <!-- Bootstrap 5 CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet" />
 
-  <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <div id="app">
 
-    <!-- ========== NAVBAR ========== -->
     <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
       <div class="container-fluid px-4 px-lg-5">
 
@@ -63,7 +54,6 @@ mysqli_close($koneksi);
       </div>
     </nav>
 
-    <!-- ========== SECTION 1: HOME ========== -->
     <section id="home" class="hero">
       <div class="hero-bg-text">PORTFOLIO</div>
 
@@ -112,7 +102,6 @@ mysqli_close($koneksi);
       </div>
     </section>
 
-    <!-- ========== SECTION 2: ABOUT ME ========== -->
     <section id="about" class="about">
       <div class="container-fluid px-4 px-lg-5">
 
@@ -120,7 +109,6 @@ mysqli_close($koneksi);
 
         <div class="row g-5 mt-1">
 
-          <!-- Kiri: Deskripsi + Pengalaman -->
           <div class="col-12 col-lg-6">
             <h2 class="section-title">Who Am <span class="accent">I?</span></h2>
 
@@ -149,7 +137,6 @@ mysqli_close($koneksi);
             </div>
           </div>
 
-          <!-- Kanan: Skills dari DATABASE -->
           <div class="col-12 col-lg-6">
             <h3 class="skills-title">Skills</h3>
             <div class="d-flex flex-column gap-4">
@@ -179,7 +166,6 @@ mysqli_close($koneksi);
       </div>
     </section>
 
-    <!-- ========== SECTION 3: CERTIFICATES ========== -->
     <section id="certificates" class="certificates">
       <div class="container-fluid px-4 px-lg-5">
 
@@ -235,7 +221,6 @@ mysqli_close($koneksi);
       </div>
     </section>
 
-    <!-- ========== FOOTER ========== -->
     <footer class="footer">
       <div class="text-center footer-top">
         <div class="footer-logo">RG<span class="accent">.</span></div>
@@ -245,12 +230,10 @@ mysqli_close($koneksi);
       <p class="footer-copy text-center">© 2025 Reswara Ganendra. All rights reserved.</p>
     </footer>
 
-  </div><!-- End #app -->
+  </div>
 
-  <!-- Bootstrap 5 JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Vue 3 CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.4.21/vue.global.prod.min.js"></script>
   <script>
     const { createApp } = Vue;
