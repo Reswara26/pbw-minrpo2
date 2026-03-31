@@ -1,12 +1,8 @@
 <?php
-// =============================================
-//  koneksi.php — Koneksi ke database MySQL
-//  Laragon default: host=localhost, user=root, password=(kosong)
-// =============================================
 
 $host     = 'localhost';
 $user     = 'root';
-$password = '';           // Laragon default: kosong
+$password = '';
 $database = 'portfolio_reswara';
 
 $koneksi = mysqli_connect($host, $user, $password, $database);
